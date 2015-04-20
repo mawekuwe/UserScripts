@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Topbar_Menu/Lichess_Topbar_Menu.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL 
-// @version     1.1
+// @version     1.2
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
@@ -51,7 +51,7 @@ $("#top").append(
     '    <li class="topmenu"><a class="link blank_if_play" href="/">Play</a>' +
     '      <ul>' +
     '        <li class="dropmenu" style=""><a class="link blank_if_play" href="/?any#hook">Create a game</a></li>' +
-    '        <li class="dropmenu" style=""><a class="link blank_if_play" href="/games">Games</a></li>' +
+    '        <!--<li class="dropmenu" style=""><a class="link blank_if_play" href="/games">Games</a></li>-->' +
     '      </ul>' +
     '    </li>' +
     '    <li class="topmenu"><a class="link blank_if_play" href="/training">Training</a>' +
@@ -77,7 +77,7 @@ $("#top").append(
     '      </ul>' +
     '    </li>' +
     '    <li class="topmenu"><a class="link blank_if_play" href="/tv">Lichess TV</a></li>' +
-    '    <li class="topmenu"><a class="link blank_if_play" href="/qa">Questions &amp; Answers</a></li>' +
+    '    <li class="topmenu"><a class="link blank_if_play" href="/qa">Q&amp;A</a></li>' +
     '    <li class="topmenu"><a class="link blank_if_play" href="/editor">Board editor</a>' +
     '      <ul>' +
     '        <li class="dropmenu"><a class="link blank_if_play" href="/analysis">Analysis</a></li>' +

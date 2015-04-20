@@ -68,7 +68,14 @@ $("#top").append(
     '      </ul>' +
     '    </li>' +
     '    <li class="topmenu"><a class="link blank_if_play" href="/team">Teams</a></li>' +
-    '    <li class="topmenu"><a class="link blank_if_play" href="/forum">Forum</a></li>' +
+    '    <li class="topmenu"><a class="link blank_if_play" href="/forum">Forum</a>' +
+    '      <ul>' +
+    '        <li class="dropmenu"><a class="link blank_if_play" href="/forum/general-chess-discussion">General Chess Discussion</a></li>' +
+    '        <li class="dropmenu"><a class="link blank_if_play" href="/forum/game-analysis">Game analysis</a></li>' +
+    '        <li class="dropmenu"><a class="link blank_if_play" href="/forum/lichess-feedback">Lichess Feedback</a></li>' +
+    '        <li class="dropmenu"><a class="link blank_if_play" href="/forum/off-topic-discussion">Off-Topic Discussion</a></li>' +
+    '      </ul>' +
+    '    </li>' +
     '    <li class="topmenu"><a class="link blank_if_play" href="/tv">Lichess TV</a></li>' +
     '    <li class="topmenu"><a class="link blank_if_play" href="/qa">Questions &amp; Answers</a></li>' +
     '    <li class="topmenu"><a class="link blank_if_play" href="/editor">Board editor</a>' +

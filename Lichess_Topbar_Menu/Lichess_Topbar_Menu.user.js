@@ -90,7 +90,12 @@ addGlobalStyle(
 );
 
 // Forum part
-if (window.location.href.indexOf("forum") > -1) {
+//if (window.location.href.indexOf("forum") > -1) {//OK
+//if (window.location.href === 'http://en.lichess.org/forum') { //NOK
+//if (window.location.pathname === '/forum') { //NOK
+if (window.location.pathname.indexOf("/forum") > -1) { //OK
+//if (window.location.href.indexOf("/forum") > -1) { //OK
+    //alert(window.location.pathname); //OK
     $( "div#lichess:has(div#lichess_forum)" ).addClass( "nomargin-left" ).attr("style", "margin-left: 0px !important;"); //OK
     //$( "#site_header" ).addClass( "test" ).attr("style", "display: none !important;"); //OK
     //$( "#site_header" ).show();
@@ -104,6 +109,28 @@ if (window.location.href.indexOf("forum") > -1) {
 
 //if (window.location.href === 'http://my.awesome.we/bsite.html') { $('.myElementClass').css('text-align','center'); }
 //$('.myElementClass').css('text-align','center');
+
+// Tournament part
+// always rated selected
+// + https://duckduckgo.com/?q=if+window.location+indexof+%3D+with+slash+through+it
+// + https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
+// + https://developer.mozilla.org/en-US/docs/Web/API/URLUtils/pathname
+// + https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/url
+
+//if (window.location.href === 'lichess.org/tournament/new') { //NOK
+//if (window.location.href === 'http://en.lichess.org/tournament/new') { //OK
+if (window.location.pathname === '/tournament/new') { //OK
+//if (window.location.pathname.indexOf("/tournament/new") > -1) { //OK
+//if (window.location.href.indexOf("/tournament/new") > -1) { //OK
+//alert(window.location.pathname); //OK
+document.evaluate("//select[@name='system']",document,null,9,null).singleNodeValue.selectedIndex=0;
+document.evaluate("//select[@name='variant']",document,null,9,null).singleNodeValue.selectedIndex=0;
+document.evaluate("//select[@name='mode']",document,null,9,null).singleNodeValue.selectedIndex=1;
+document.evaluate("//select[@name='clockTime']",document,null,9,null).singleNodeValue.selectedIndex=0;
+document.evaluate("//select[@name='clockIncrement']",document,null,9,null).singleNodeValue.selectedIndex=1;
+document.evaluate("//select[@name='minutes']",document,null,9,null).singleNodeValue.selectedIndex=3;
+document.evaluate("//select[@name='minPlayers']",document,null,9,null).singleNodeValue.selectedIndex=0;
+}
 
 if (oldmenu) {
     // if false this code is not executed

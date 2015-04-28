@@ -16,6 +16,7 @@
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
+// @icon        https://raw.githubusercontent.com/ornicar/lila/master/public/images/favicon-32-white.png
 // ==/UserScript==
 
 // changelog

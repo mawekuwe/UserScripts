@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Topbar_Menu/Lichess_Topbar_Menu.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL 
-// @version     1.5
+// @version     1.5.1
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
@@ -55,11 +55,11 @@ function addGlobalStyle(css) {
 addGlobalStyle(
     // CSS Menu part
     '#nav li {display:block;float:left;list-style-type:none;width:auto;}' +
-    '#primary_nav_wrap {}' +
+    '/*#primary_nav_wrap {}*/' +
 
     // UPPERCASE for topbar or every submenu?
     '#primary_nav_wrap > ul {text-transform: uppercase !important;}' +
-    '#primary_nav_wrap > ul > li > ul {text-transform: lowercase !important;}' +
+    '#primary_nav_wrap > ul > li > ul {text-transform: none !important;}' +
 
     //
     '#primary_nav_wrap ul {list-style:none;position:relative;float:left;margin:0;padding:0}' +

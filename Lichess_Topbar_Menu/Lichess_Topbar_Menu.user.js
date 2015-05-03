@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Topbar_Menu/Lichess_Topbar_Menu.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL 
-// @version     1.4
+// @version     1.5
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
@@ -20,6 +20,8 @@
 // ==/UserScript==
 
 // changelog
+// version 1.5
+// css Text-transform Small fix
 // version 1.4
 // Added function to highlight the current menu entry
 // Added ability to hide TV ads in homepage from some users.(thanks to robertmaxrees from #jquery)

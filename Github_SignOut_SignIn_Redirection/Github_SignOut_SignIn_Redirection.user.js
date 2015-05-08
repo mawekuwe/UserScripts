@@ -12,25 +12,12 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Github_SignOut_SignIn_Redirection/Github_SignOut_SignIn_Redirection.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=
-// @version     1.0
+// @version     1.1
 // @grant       none
 // @run-at      document-end
 // @include     https://github.com/*
 // @icon        https://assets-cdn.github.com/favicon.ico
 // ==/UserScript==
-
-// http://stackoverflow.com/q/30128372/4070433
-// https://openuserjs.org/corner/After_log-out_on_GitHub_redirect_to_Sign-in_page_instead_of_the_home_page.
-
-// thanks to <robertmaxrees> from #jquery http://fixee.org/paste/6cnb8np/
-/*
-if ($('body.logged_out').length) {
-	window.location.href = 'https://github.com/login';
-}
-*/
-
-// Solution from zaak. Thank you!
-// http://stackoverflow.com/a/30128972/4070433
 
 var myRedirectStorageKey = 'redirectMeToLogin';
 

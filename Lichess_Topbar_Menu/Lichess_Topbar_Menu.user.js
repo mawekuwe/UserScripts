@@ -20,6 +20,9 @@
 // ==/UserScript==
 
 // changelog
+// version 1.6
+// Disabled topmenu since the official one is back
+// Fix font-size in #tournament
 // version 1.5
 // css Text-transform Small fix
 // version 1.4
@@ -80,12 +83,18 @@ addGlobalStyle(
     '#primary_nav_wrap ul li:hover > ul{display:block}' +
 
     // TV history
-    '#tv_history div.content {height: 250px !important;}'
+    '#tv_history div.content {height: 250px !important;}' +
+
+	// tournament
+	'#tournament a.user_link span[data-icon] {font-size: 1.0em !important;}' +
+	'#tournament a.user_link {text-decoration: none !important;}'
+
 
 );
 
 // Topbar Menu
 // thanks to RaulJose for internationalized menu entries.
+/*
 if (oldmenu) {
     // if false this code is not executed
     $("#top").append(
@@ -181,6 +190,7 @@ else {
         '</ul>' +
         '</nav></div>');
 }
+*/
 
 
 $(document).ready(function() {

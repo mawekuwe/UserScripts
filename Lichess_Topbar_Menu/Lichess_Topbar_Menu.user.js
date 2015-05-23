@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Topbar_Menu/Lichess_Topbar_Menu.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL 
-// @version     1.6
+// @version     1.7
 // @grant       none
 // @run-at      document-end
 // @include     http://*.lichess.org/*
@@ -20,6 +20,8 @@
 // ==/UserScript==
 
 // changelog
+// version 1.7
+// Moved PING on Topbar
 // version 1.6
 // Disabled topmenu since the official one is back
 // Fix font-size in #tournament
@@ -85,10 +87,13 @@ addGlobalStyle(
     // TV history
     '#tv_history div.content {height: 250px !important;}' +
 
-	// tournament
-	'#tournament a.user_link span[data-icon] {font-size: 1.0em !important;}' +
-	'#tournament a.user_link {text-decoration: none !important;}'
+    // tournament
+    '#tournament a.user_link span[data-icon] {font-size: 1.0em !important;}' +
+    '#tournament a.user_link {text-decoration: none !important;}' +
 
+    // ping
+    '#top .ping {text-decoration: none;font-size: 13px;height: 24px;line-height: 24px;padding: 0 8px;}' +
+    '#top .ping::after {content: " ms"}'
 
 );
 
@@ -241,3 +246,19 @@ if (streamOnAir) {
         }
     }
 }
+
+////////////////////////////
+// Ping on topbar is back //
+////////////////////////////
+// remove the separator
+$(".auth.fright > .links.dropdown > span.sep").remove();
+// move PING on Topbar
+var ping = $('.ping').detach();
+ping.addClass("fright").insertAfter('#themepicker');
+// Remove text "PING " but can't keep "ms" then I add it with css "content:"
+$(".ping")
+.contents()
+.filter(function() {
+	//return this.nodeType == 3; //Node.TEXT_NODE
+	return this.nodeType !== 1;
+}).remove();

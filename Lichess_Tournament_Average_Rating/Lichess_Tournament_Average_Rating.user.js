@@ -12,7 +12,7 @@
 // @updateURL   https://github.com/mawekuwe/UserScripts/raw/master/Lichess_Tournament_Average_Rating/Lichess_Tournament_Average_Rating.user.js
 // @supportURL  https://github.com/mawekuwe/UserScripts/issues
 // @contributionURL
-// @version     1.0
+// @version     1.1
 // @grant       none
 // @run-at      document-end
 // @include      /\.lichess\.org\/tournament\/\w{8}$/
@@ -38,6 +38,6 @@ function ratingAverage() {
 	//console.log("new_number2: " + new_number2);
 
 }
-if (window.location.pathname.indexOf("/tournament/") > -1) {
+if (window.location.pathname.indexOf("/tournament/") > -1 && $('.slist.user_list').length {
 	ratingAverage();
 }
